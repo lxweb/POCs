@@ -1,10 +1,9 @@
-<p>posts works!</p>
 <article class="post">
     <h2>
-        {{ post.title }}
+        {{ data.title }}
     </h2>
     <p>
-        {{ post.body }}
+        {{ data.body }}
     </p>
-    <button (click)='mostrarId(10)'>Mostrar ID</button>
+    <button (click)='mostrarId(data.id)'>Mostrar ID</button>
 </article>
