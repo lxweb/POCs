@@ -1,0 +1,12 @@
+<nav>
+    <a href="/">Home</a> 
+    <a href="/contactUs">Contact us</a> 
+    <a href="/about">About us</a>
+    <a href="/section3">Test Section</a>
+    
+    <ng-container *ngIf="!houseDefined else moreOptions"></ng-container> 
+</nav>
+
+<ng-template #moreOptions>
+    otras opciones
+</ng-template>

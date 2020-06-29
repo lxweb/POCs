@@ -8,6 +8,8 @@ import { PostComponent } from './components/post/post.component';
 import { ContentFilterComponent } from './components/content-filter/content-filter.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { ContainerComponent } from './components/container/container.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ContainerComponent } from './components/container/container.component';
     PostComponent,
     ContentFilterComponent,
     PostFormComponent,
-    ContainerComponent
+    ContainerComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
