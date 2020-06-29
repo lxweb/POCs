@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/common/post';
 
 @Component({
   selector: 'app-posts-list',
@@ -38,8 +39,8 @@ export class PostsListComponent implements OnInit {
 
   }
 
-  addPost(userId:number, id:number, title:string, body:string){
-    let newPost = {userId, id, title, body};
+  createNewPost(event:Post){
+    let newPost:Post = event;
     this.posts.push(newPost);
   }
 }
