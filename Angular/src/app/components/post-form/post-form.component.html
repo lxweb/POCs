@@ -1,14 +1,19 @@
 <ng-container>
     
+    Title: <br/>
     <input type="text" 
         name="newTitle" 
         placeholder="Write some title or your post"
+        (keyup)="validateNewPostForm($event)"
         #newTitle/>
         <br>
     
-    <textarea name="body" #newBody>
-        Here comes the body...
-    </textarea>
+    Body:<br/>
+    <textarea name="body" 
+        placeholder="Here comes the body..."
+        #newBody></textarea>
     <br>
-    <button (click)="createNewPost(newTitle.value, newBody.value)">Create new Post</button>
+    <button 
+        (click)="createNewPost(newTitle.value, newBody.value)"
+        [disabled]="desactivado" >Create new Post</button>
 </ng-container>

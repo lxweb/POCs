@@ -7,8 +7,11 @@ import { Post } from '../../common/post';
   styleUrls: ['./post-form.component.less']
 })
 export class PostFormComponent {
-
+  
   @Output() propagateCreateNewPost = new EventEmitter<Post>();
+
+  desactivado=true;
+
   constructor() { }
 
   createNewPost(title:string, body:string):void{
@@ -16,4 +19,10 @@ export class PostFormComponent {
     let userId:number= 0;
     this.propagateCreateNewPost.emit({id, userId, title, body});
   }
+
+  validateNewPostForm(e){
+    this.desactivado = !e.target.value;
+  }
+
+  
 }
