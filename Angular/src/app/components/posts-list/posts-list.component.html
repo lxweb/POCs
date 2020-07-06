@@ -1,14 +1,6 @@
 <ul class="postsList">
+    <app-post-form (propagateCreateNewPost)="createNewPost($event)"></app-post-form>
     <li  *ngFor="let post of posts">
-        <article class="post">
-            <h2>
-                {{ post.title }}
-            </h2>
-            <p>
-                {{ post.body }}
-            </p>
-            <button (click)='mostrarId(post.id)'>Mostrar ID</button>
-        </article>
-        <!-- <app-post post="(post)""></app-post>-->
+        <app-post [post]="post"></app-post>
     </li>
 </ul>

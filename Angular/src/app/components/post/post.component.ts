@@ -7,11 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  @Input() post: any;
-  constructor() { }
+  @Input("post") data: any;
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    console.log(this.post);
+    console.log(this.data);
   }
 
   mostrarId(id: number){
