@@ -16,6 +16,7 @@ import { HomeComponent } from './views/home/home.component';
 import { PostsComponent } from './views/posts/posts.component';
 import { UsersComponent } from './views/users/users.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
+import { Notfound404Component } from './views/notfound404/notfound404.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './views/contact-us/contact-us.component';
     HomeComponent,
     PostsComponent,
     UsersComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    Notfound404Component
   ],
   imports: [
     BrowserModule,
