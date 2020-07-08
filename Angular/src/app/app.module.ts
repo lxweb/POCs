@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './components/app/app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -35,6 +36,7 @@ import { Notfound404Component } from './views/notfound404/notfound404.component'
     Notfound404Component
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
