@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
 import { Post } from '../../common/post';
 
 @Component({
@@ -9,8 +9,10 @@ import { Post } from '../../common/post';
 export class PostFormComponent {
   
   @Output() propagateCreateNewPost = new EventEmitter<Post>();
-
-  desactivado=true;
+  @Input() previewActivated;
+  newTitle:string;
+  newBody:string;
+  desactivado:boolean = true;
 
   constructor() { }
 

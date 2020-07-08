@@ -2,18 +2,22 @@
     
     Title: <br/>
     <input type="text" 
-        name="newTitle" 
         placeholder="Write some title or your post"
         (keyup)="validateNewPostForm($event)"
-        #newTitle/>
+        [(ngModel)]="newTitle"/>
         <br>
     
     Body:<br/>
     <textarea name="body" 
         placeholder="Here comes the body..."
-        #newBody></textarea>
+        [(ngModel)]="newBody"></textarea>
     <br>
     <button 
-        (click)="createNewPost(newTitle.value, newBody.value)"
+        (click)="createNewPost(newTitle, newBody)"
         [disabled]="desactivado" >Create new Post</button>
+
+    <div *ngIf="previewActivated" class="activePreview">
+        Title: {{ newTitle }}
+        Body: {{ newBody }}
+    </div>
 </ng-container>
