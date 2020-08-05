@@ -1,0 +1,23 @@
+<ng-container>
+    
+    Title: <br/>
+    <input type="text" 
+        placeholder="Write some title or your post"
+        (keyup)="validateNewPostForm($event)"
+        [(ngModel)]="newTitle"/>
+        <br>
+    
+    Body:<br/>
+    <textarea name="body" 
+        placeholder="Here comes the body..."
+        [(ngModel)]="newBody"></textarea>
+    <br>
+    <button 
+        (click)="createNewPost(newTitle, newBody)"
+        [disabled]="desactivado" >Create new Post</button>
+
+    <div *ngIf="previewActivated" class="activePreview">
+        Title: {{ newTitle }}
+        Body: {{ newBody }}
+    </div>
+</ng-container>
